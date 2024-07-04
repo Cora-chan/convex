@@ -1,4 +1,4 @@
-# Use Convex and Replicate to create some interesting pictures with drawing and prompt
+# Use Convex and Replicate to create some interesting pictures with paintings and prompts
 Stack:
 React.js Next.js Convex Replicate Tailwind 
 <p></p>
