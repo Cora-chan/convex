@@ -74,3 +74,7 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .promptInput {
+    initial-value: "draw a ball";
+  }
