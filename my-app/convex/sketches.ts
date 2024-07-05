@@ -36,12 +36,11 @@ export const getSketches = query(async ({ db }) => {
   return sketches;
 });
 
-
-
 export const updateStetchResult = internalMutation(
   async({db},{sketchId,result}:{sketchId:string; result:string}  
   )=> {
     await db.patch(<Id>sketchId, {
       result,
     })
+    
 });

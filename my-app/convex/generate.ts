@@ -17,13 +17,7 @@ export const generate = internalAction(
       const replicate = new Replicate({
         auth: process.env.REPLICATE_API_TOKEN!,
       });
-  
-      const input = {
-        image:
-          "https://replicate.delivery/pbxt/IJE6zP4jtdwxe7SffC7te9DPHWHW99dMXED5AWamlBNcvxn0/user_1.png",
-        prompt: "a photo of a brightly colored turtle",
-      };
-  
+    
       const output = (await replicate.run(
         "jagilley/controlnet-scribble:435061a1b5a4c1e26740464bf786efdfa9cb3a3ac488595a2de23e143fdb0117",
         {
@@ -36,12 +30,10 @@ export const generate = internalAction(
           },
         }
       )) as [string,string]
-  
+
       await runMutation(internal.sketches.updateStetchResult,{
         sketchId,
         result:output[1]
-      })
-      console.log(output);
-      //=> ["https://replicate.delivery/pbxt/aNV6gZDqqiJiPddvDfV9jkA...
+       })
     }
   );
